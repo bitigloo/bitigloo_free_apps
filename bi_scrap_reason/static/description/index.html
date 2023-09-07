@@ -1,0 +1,250 @@
+
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Inter);
+
+        #body {
+            background-color: #0f0210;
+            color: #e8ffe1;
+            font-family: 'Inter';
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #0f0210;
+            padding-top: 1%;
+        }
+
+        .logo {
+            display: block;
+            max-width: auto;
+            height: 2rem;
+            margin: 1em 1em 0 1em;
+        }
+
+        main {
+            flex: 1 0 auto;
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            overflow: auto;
+            margin: 0 auto;
+            padding:0 1em;
+        }
+
+        h1 {
+            color: #a7ff85;
+            text-align: center;
+            font-size: 38px;
+        }
+
+        .h2-primary {
+            color: #a7ff85;
+        }
+
+        .h2-secondary {
+            color: #ff85c0;
+        }
+
+        .fa-li {
+            color: #ff85c0;
+        }
+
+        .link {
+            color: #35979C;
+        }
+
+        .inline-image {
+            height: 1em;
+        }
+
+        .banner {
+            background-color: #E8FFE1;
+            color: #212529;
+            display: block;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .row {
+            --gutter-x: 2rem;
+            --gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            align-items: center;
+        }
+
+        .large-column {
+            flex: 0 0 auto;
+            width: 70%;
+            min-height: 20px;
+            padding-left: 1rem;
+        }
+
+        .small-column {
+            flex: 0 0 auto;
+            width: 25%;
+            padding-right: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            border: #ff85c0;
+            border-radius: 20px;
+            background-color: #ff85c0;
+            padding: 0.5rem;
+            font-size: 20px;
+            color: #0f0210;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .screenshot {
+            max-width: 80%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .small-logo {
+            max-height: 5rem;
+        }
+
+        footer {
+            background-color: #0f0210;
+            width: 100%;
+            border-top-color: #e8ffe1;
+            border-top-width: 1px;
+            border-top-style: solid;
+            padding-bottom: 1em;
+            padding-top: 0.5em;
+        }
+        .small-text {
+            text-align: center;
+            font-size: small;
+        }
+
+        #notes {
+            color: #a7ff85;
+        }
+    </style>
+
+
+<div id="body">
+    <header class="header">
+        <div>
+        <a href="https://www.bitigloo.com/r/bw4">
+            <img src="https://www.bitigloo.com/web/image/website/1/logo/bitigloo%20GmbH?unique=deec136" class="logo"
+                alt="Odoo Partner in Bonn NRW Deutschland">
+        </a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>Add a Reason on Scrap</h1>
+        </div>
+        <p>This module was written to give the user the possibility to add a reason for the scrap order.</p>
+        <h3>Features:</h3>
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-star"></i>creating reasons as many as possible,</li>
+            <li><i class="fa-li fa fa-star"></i>possibility to prioritize some reasons by ranking them in the list view
+            </li>
+            <li><i class="fa-li fa fa-star"></i>possibility to select a reason from the list reasons</li>
+            <li><i class="fa-li fa fa-star"></i>possibility to add a note on the scrap</li>
+            <li><i class="fa-li fa fa-star"></i>adding the reason and note on both the wizard (through the Scrap
+                button on the move) as well as on the scrap order from the operations.</li>
+        </ul>
+        <h2 class="h2-primary">Configuration:</h2>
+        <p>To configure the Scrap Reasons, you need to have &quot;Inventory Manager&quot; access
+            right.</p>
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-cog fa-spin"></i>Go to <i>Inventory / Configuration / Warehouse Management / Scrap
+                    Reasons</i>.</li>
+            <li><i class="fa-li fa fa-cog fa-spin"></i>Easily add a new Scrap Reason.</li>
+            <li><i class="fa-li fa fa-cog fa-spin"></i>On the list view, with the help of the handle
+                <img src="./handle.png" class="inline-image" alt="Odoo Partner in Bonn NRW Deutschland">
+                , you can order the reasons
+            </li>
+        </ul>
+        <h2 class="h2-primary">How to Use:</h2>
+        <p>To use this module, you need to first configure the reasons as described above,
+            then:</p>
+        <ol>
+            <li>On a validated move to an internal location, where the button Scrap is available, click on the Scrap button.
+            </li>
+            <li>On the Wizard, you are able to select a Reason or add a note<br>
+                <img src="./reason_on_wizard.png" class="screenshot" alt="Odoo Scrap Reason">
+            </li>
+            <li>From <i>Inventory / Operations / Scrap</i>, create or select a scrap order, then select a Reason or add 
+                a note<br>
+                <img src="./reason_on_scrap_form.png" class="screenshot" alt="Odoo Scrap Reason">
+            </li>
+            <li>With the smart button on the <i>Scrap Reason</i> form, you can go to the list of &quot;done&quot; scrap 
+                orders with the corresponding reason:<br>
+            <img src="./scrap_reason_form_with_scrap_order_counts.png" class="screenshot" alt="Odoo Scrap Reason">
+            </li>
+        </ol>
+        <p><i id="notes">Notes:</i></p>
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-lightbulb-o"></i>Only inventory managers can create and edit the reasons from the
+                Configuration.</li>
+            <li><i class="fa-li fa fa-lightbulb-o"></i>The option &quot;Create&quot; as well as &quot;Create and
+                Edit&quot; are disabled on the views.</li>
+            <li><i class="fa-li fa fa-lightbulb-o"></i>The reason and note will be read-only when the Scrap is
+                &quot;done&quot;, but just in the view so as to be able to import/update the data.</li>
+        </ul>
+        <section class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="large-column">
+                        <h3>For Odoo implemetation and customization, do not hesitate to contact us.</h3>
+                    </div>
+                    <div class="small-column">
+                        <a href="https://www.bitigloo.com/r/Arp" class="button">
+                            <strong>Contact Us</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2 class="h2-secondary">Feedback &amp; Issues</h2>
+        <p>In case of feedback or any possible issues, this can be reported through submitting
+            <a class="link" href="https://www.bitigloo.com/r/rYu">this
+                form</a> or via an email to <a class="link" href="mailto:apps@bitigloo.com">apps@bitigloo.com</a>.
+        </p>
+        <h2 class="h2-secondary">Credits</h2>
+        <h3>Authors</h3>
+        <ul>
+            <li>bitigloo GmbH &lt;<a class="link" href="https://github.com/bitigloo">https://github.com/bitigloo</a>&gt;
+            </li>
+        </ul>
+        <h3>Maintainers</h3>
+        <p>This module is maintained by
+            <a class="link" href="https://www.bitigloo.com/r/bw4">bitigloo GmbH</a>. Check out our
+            <a class="link" href="https://www.bitigloo.com/r/zjj">products</a> and
+            <a class="link" href="https://www.bitigloo.com/r/Lzo">services</a>.
+        </p>
+        <div><img src="./icon.png" class="small-logo"></div>
+        <p>bitigloo GmbH is a certified Odoo partner in Germany which enjoys the expertise of
+            a team of proficient Odoo experts with years of experience in finding the best ERP solutions for various
+            businesses, tailoring them to their specific needs, and implementing them in the most effective way.
+        </p>
+        <h2 class="h2-secondary">License</h2>
+        <p>This module is under the license &quot;GPL-3 or any later version&quot; &rarr;
+            <a class="link" href="https://www.gnu.org/licenses/licenses.html%23LicenseURLs">Link</a>
+        </p>
+    </main>
+    <footer>
+        <div class="small-text"><i class="fa fa-building"></i> bitigloo GmbH | <i class="fa fa-globe"></i> www.bitigloo.com | <i class="fa fa-map-marker"></i> Siemensstr. 36, D-53121, Germany | <i class="fa fa-phone"></i> +49 (228) 6848-6549 </div>
+    </footer>
+</div>
