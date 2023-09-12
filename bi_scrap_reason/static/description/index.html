@@ -1,250 +1,381 @@
-
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
-        @import url(https://fonts.googleapis.com/css?family=Inter);
-
-        #body {
-            background-color: #0f0210;
-            color: #e8ffe1;
-            font-family: 'Inter';
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .header {
-            width: 100%;
-            background-color: #0f0210;
-            padding-top: 1%;
-        }
-
-        .logo {
-            display: block;
-            max-width: auto;
-            height: 2rem;
-            margin: 1em 1em 0 1em;
-        }
-
-        main {
-            flex: 1 0 auto;
-            position: relative;
-            display: flex;
-            flex-flow: column nowrap;
-            overflow: auto;
-            margin: 0 auto;
-            padding:0 1em;
-        }
-
-        h1 {
-            color: #a7ff85;
-            text-align: center;
-            font-size: 38px;
-        }
-
-        .h2-primary {
-            color: #a7ff85;
-        }
-
-        .h2-secondary {
-            color: #ff85c0;
-        }
-
-        .fa-li {
-            color: #ff85c0;
-        }
-
-        .link {
-            color: #35979C;
-        }
-
-        .inline-image {
-            height: 1em;
-        }
-
-        .banner {
-            background-color: #E8FFE1;
-            color: #212529;
-            display: block;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .container {
-            width: 100%;
-        }
-
-        .row {
-            --gutter-x: 2rem;
-            --gutter-y: 0;
-            display: flex;
-            flex-wrap: wrap;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            padding-left: 1rem;
-            align-items: center;
-        }
-
-        .large-column {
-            flex: 0 0 auto;
-            width: 70%;
-            min-height: 20px;
-            padding-left: 1rem;
-        }
-
-        .small-column {
-            flex: 0 0 auto;
-            width: 25%;
-            padding-right: 1rem;
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .button {
-            display: inline-block;
-            border: #ff85c0;
-            border-radius: 20px;
-            background-color: #ff85c0;
-            padding: 0.5rem;
-            font-size: 20px;
-            color: #0f0210;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .screenshot {
-            max-width: 80%;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .small-logo {
-            max-height: 5rem;
-        }
-
-        footer {
-            background-color: #0f0210;
-            width: 100%;
-            border-top-color: #e8ffe1;
-            border-top-width: 1px;
-            border-top-style: solid;
-            padding-bottom: 1em;
-            padding-top: 0.5em;
-        }
-        .small-text {
-            text-align: center;
-            font-size: small;
-        }
-
-        #notes {
-            color: #a7ff85;
-        }
-    </style>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
-<div id="body">
-    <header class="header">
-        <div>
-        <a href="https://www.bitigloo.com/r/bw4">
-            <img src="https://www.bitigloo.com/web/image/website/1/logo/bitigloo%20GmbH?unique=deec136" class="logo"
-                alt="Odoo Partner in Bonn NRW Deutschland">
-        </a>
-        </div>
-    </header>
-    <main>
-        <div>
-            <h1>Add a Reason on Scrap</h1>
-        </div>
-        <p>This module was written to give the user the possibility to add a reason for the scrap order.</p>
-        <h3>Features:</h3>
-        <ul class="fa-ul">
-            <li><i class="fa-li fa fa-star"></i>creating reasons as many as possible,</li>
-            <li><i class="fa-li fa fa-star"></i>possibility to prioritize some reasons by ranking them in the list view
-            </li>
-            <li><i class="fa-li fa fa-star"></i>possibility to select a reason from the list reasons</li>
-            <li><i class="fa-li fa fa-star"></i>possibility to add a note on the scrap</li>
-            <li><i class="fa-li fa fa-star"></i>adding the reason and note on both the wizard (through the Scrap
-                button on the move) as well as on the scrap order from the operations.</li>
-        </ul>
-        <h2 class="h2-primary">Configuration:</h2>
-        <p>To configure the Scrap Reasons, you need to have &quot;Inventory Manager&quot; access
-            right.</p>
-        <ul class="fa-ul">
-            <li><i class="fa-li fa fa-cog fa-spin"></i>Go to <i>Inventory / Configuration / Warehouse Management / Scrap
-                    Reasons</i>.</li>
-            <li><i class="fa-li fa fa-cog fa-spin"></i>Easily add a new Scrap Reason.</li>
-            <li><i class="fa-li fa fa-cog fa-spin"></i>On the list view, with the help of the handle
-                <img src="./handle.png" class="inline-image" alt="Odoo Partner in Bonn NRW Deutschland">
-                , you can order the reasons
-            </li>
-        </ul>
-        <h2 class="h2-primary">How to Use:</h2>
-        <p>To use this module, you need to first configure the reasons as described above,
-            then:</p>
-        <ol>
-            <li>On a validated move to an internal location, where the button Scrap is available, click on the Scrap button.
-            </li>
-            <li>On the Wizard, you are able to select a Reason or add a note<br>
-                <img src="./reason_on_wizard.png" class="screenshot" alt="Odoo Scrap Reason">
-            </li>
-            <li>From <i>Inventory / Operations / Scrap</i>, create or select a scrap order, then select a Reason or add 
-                a note<br>
-                <img src="./reason_on_scrap_form.png" class="screenshot" alt="Odoo Scrap Reason">
-            </li>
-            <li>With the smart button on the <i>Scrap Reason</i> form, you can go to the list of &quot;done&quot; scrap 
-                orders with the corresponding reason:<br>
-            <img src="./scrap_reason_form_with_scrap_order_counts.png" class="screenshot" alt="Odoo Scrap Reason">
-            </li>
-        </ol>
-        <p><i id="notes">Notes:</i></p>
-        <ul class="fa-ul">
-            <li><i class="fa-li fa fa-lightbulb-o"></i>Only inventory managers can create and edit the reasons from the
-                Configuration.</li>
-            <li><i class="fa-li fa fa-lightbulb-o"></i>The option &quot;Create&quot; as well as &quot;Create and
-                Edit&quot; are disabled on the views.</li>
-            <li><i class="fa-li fa fa-lightbulb-o"></i>The reason and note will be read-only when the Scrap is
-                &quot;done&quot;, but just in the view so as to be able to import/update the data.</li>
-        </ul>
-        <section class="banner">
+    </head>
+    <body>
+        <section id="sh_module_heading">
             <div class="container">
-                <div class="row">
-                    <div class="large-column">
-                        <h3>For Odoo implemetation and customization, do not hesitate to contact us.</h3>
-                    </div>
-                    <div class="small-column">
-                        <a href="https://www.bitigloo.com/r/Arp" class="button">
-                            <strong>Contact Us</strong>
-                        </a>
+                <div class="sh_center text-center" style='margin: 2rem 0;'>
+                    <div class="row align-items-center" style='align-items: center;'>
+                        <div class="col-lg-4 col-md-4 col-sm-12" style='text-align: left;'>
+                            <img src='bitigloo_GmbH.svg' alt='logo' style="width: 80%;">
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12" style='text-align: right;'>
+                            <span class='btn btn-primary'
+                                  style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; background-color: #FF85C0;border-color: #FF85C0;">
+                                <i class='fa fa-check' style="margin-right: 9px;"></i>Supported:
+                            </span>
+                            <span class='btn btn-primary'
+                                  style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; background-color: #FF85C0;border-color: #FF85C0;">
+                                <i class='fa fa-check' style="margin-right: 9px;"></i>Community
+                            </span>
+                            <span class='btn btn-primary'
+                                  style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; background-color: #FF85C0;border-color: #FF85C0;">
+                                <i class='fa fa-check' style="margin-right: 9px;"></i>Enterprise
+                            </span>
+                            <span class='btn btn-primary'
+                                  style="position: relative; overflow: hidden; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; background-color: #FF85C0;border-color: #FF85C0;">
+                                <i class='fa fa-check' style="margin-right: 9px;"></i>Odoo.sh
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <h2 class="h2-secondary">Feedback &amp; Issues</h2>
-        <p>In case of feedback or any possible issues, this can be reported through submitting
-            <a class="link" href="https://www.bitigloo.com/r/rYu">this
-                form</a> or via an email to <a class="link" href="mailto:apps@bitigloo.com">apps@bitigloo.com</a>.
-        </p>
-        <h2 class="h2-secondary">Credits</h2>
-        <h3>Authors</h3>
-        <ul>
-            <li>bitigloo GmbH &lt;<a class="link" href="https://github.com/bitigloo">https://github.com/bitigloo</a>&gt;
-            </li>
-        </ul>
-        <h3>Maintainers</h3>
-        <p>This module is maintained by
-            <a class="link" href="https://www.bitigloo.com/r/bw4">bitigloo GmbH</a>. Check out our
-            <a class="link" href="https://www.bitigloo.com/r/zjj">products</a> and
-            <a class="link" href="https://www.bitigloo.com/r/Lzo">services</a>.
-        </p>
-        <div><img src="./icon.png" class="small-logo"></div>
-        <p>bitigloo GmbH is a certified Odoo partner in Germany which enjoys the expertise of
-            a team of proficient Odoo experts with years of experience in finding the best ERP solutions for various
-            businesses, tailoring them to their specific needs, and implementing them in the most effective way.
-        </p>
-        <h2 class="h2-secondary">License</h2>
-        <p>This module is under the license &quot;GPL-3 or any later version&quot; &rarr;
-            <a class="link" href="https://www.gnu.org/licenses/licenses.html%23LicenseURLs">Link</a>
-        </p>
-    </main>
-    <footer>
-        <div class="small-text"><i class="fa fa-building"></i> bitigloo GmbH | <i class="fa fa-globe"></i> www.bitigloo.com | <i class="fa fa-map-marker"></i> Siemensstr. 36, D-53121, Germany | <i class="fa fa-phone"></i> +49 (228) 6848-6549 </div>
-    </footer>
-</div>
+        <!-- heading  -->
+        <section id="sh_module_heading" style="padding-top: 50px;">
+            <div class="container">
+                <div class="sh_center text-center">
+                    <h4 style="font-size: 30px;font-weight: 600;color: #A7FF85;margin-bottom: 10px;">Add a Reason on
+                        Scrap
+                    </h4>
+                    <img src="heading.png" alt="heading"/>
+                    <p style="color: #777;font-size: 18px;margin: 0;letter-spacing: 1px;margin-top: 12px;">
+                        This module was written to give the user the possibility to add a reason for the scrap order.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="sh_feature" style="padding-top: 50px;background-color: transparent;">
+            <div class="container">
+                <div class="sh_center text-center mb-5">
+                    <h4 style="font-size: 28px;font-weight: 600;color: #A7FF85;margin-bottom: 10px;">Features</h4>
+                    <!-- <hr style="width: 100px;border-width: 2px;border-color: #3363c1;" /> -->
+                    <img src="heading.png" alt="heading"/>
+                </div>
+                <div id="Feature" class="tab-pane active">
+                    <ul style="padding: 0;list-style: none;">
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                            <span class="fa fa-star"
+                                  style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            creating reasons as many as possible
+                        </li>
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                            <span class="fa fa-star"
+                                  style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            possibility to prioritize some reasons by ranking them in the list view
+                        </li>
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                            <span class="fa fa-star"
+                                  style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            possibility to select a reason from the list reasons
+                        </li>
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                            <span class="fa fa-star"
+                                  style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            possibility to add a note on the scrap
+                        </li>
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                            <span class="fa fa-star"
+                                  style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            adding the reason and note on both the wizard (through the Scrap button on the move) as well
+                            as on the scrap order from the operations.
+                        </li>
+                    </ul>
+                </div>
+                <section id="sh_feature" style="padding-top: 50px;background-color: transparent;">
+                    <div class="container">
+                        <div class="sh_center text-center mb-5">
+                            <h4 style="font-size: 28px;font-weight: 600;color: #A7FF85;margin-bottom: 10px;">
+                                Configuration
+                            </h4>
+                            <!-- <hr style="width: 100px;border-width: 2px;border-color: #3363c1;" /> -->
+                            <img src="heading.png" alt="heading"/>
+                        </div>
+                        <div id="Feature" class="tab-pane active">
+                            <ul style="padding: 0;list-style: none;">
+                                <li class="shadow rounded"
+                                    style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                                    <span class="fa fa-cog"
+                                          style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                                    Go to Inventory / Configuration / Warehouse Management / Scrap Reasons.
+                                </li>
+                                <li class="shadow rounded"
+                                    style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                                    <span class="fa fa-cog"
+                                          style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                                    Easily add a new Scrap Reason.
+                                </li>
+                                <li class="shadow rounded"
+                                    style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                                    <span class="fa fa-cog"
+                                          style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                                    On the list view, with the help of the handle <img src="handle.png">, you can order
+                                    the reasons
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="sh_tab" style="padding-top: 50px;background-color: transparent;">
+                    <div class="">
+                        <ul class="nav nav-tabs justify-content-center" role="tablist"
+                            style="justify-content: center;padding-bottom: 10px;background-color: transparent;">
+                            <li class="nav-item rounded"
+                                style="cursor:pointer; background-color: #FF85C0;color: #fff;border-radius: 0;font-weight: 600;font-size: 14px;margin: 0 2px;border-radius: 0.25rem !important;">
+                                <span class="nav-link active rounded" data-toggle="tab" href="#Configurations"
+                                      style="cursor: pointer;border: 1px solid #FF85C0;padding: 10px 20px;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+                                    How to Use
+                                </span>
+                            </li>
+                            <li class="nav-item rounded"
+                                style="cursor:pointer; background-color: #FF85C0;color: #fff;border-radius: 0;font-weight: 600;font-size: 14px;margin: 0 2px;border-radius: 0.25rem !important;">
+                                <span class="nav-link rounded" data-toggle="tab" href="#Support"
+                                      style="cursor: pointer;border: 1px solid #FF85C0;padding: 10px 20px;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+                                    Support
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="tab-content"
+                             style="padding-top: 30px;background-color: transparent;padding-bottom: 30px;">
+
+                            <!-- tab 2 -->
+                            <div id="Configurations" class="tab-pane active">
+                                <section id="sh_configuration">
+                                    <div class="container">
+                                        <div class="text-center">
+                                            <p style="color: #1b325f;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;letter-spacing: .5px;">
+                                            <ul>
+                                                <ol>On a validated move to an internal location, where the button Scrap
+                                                    is available, click on the Scrap button.
+                                                </ol>
+                                                <ol>On the Wizard, you are able to select a Reason or add a note</ol>
+                                            </ul>
+                                            </p>
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded shadow" src="reason_on_wizard.png"
+                                                     style="width: 100%;"/>
+                                            </div>
+                                            <br/>
+                                            <p style="color: #1b325f;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;letter-spacing: .5px;">
+                                                From Inventory / Operations / Scrap, create or select a scrap order,
+                                                then select a Reason or add a note
+                                            </p>
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded shadow"
+                                                     src="reason_on_scrap_form.png" style="width: 100%;"/>
+                                            </div>
+                                            <br/>
+                                            <p style="color: #1b325f;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;letter-spacing: .5px;">
+                                                With the smart button on the Scrap Reason form, you can go to the list
+                                                of "done" scrap orders with the corresponding reason:
+                                            </p>
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded shadow"
+                                                     src="scrap_reason_form_with_scrap_order_counts.png"
+                                                     style="width: 100%;"/>
+                                            </div>
+                                            <br/>
+                                            <p style="color: #a7ff85;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;letter-spacing: .5px;">
+                                                Notes
+                                            </p>
+                                            <div class="col-md-12">
+                                                <li style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                                                    <span class="fa fa-lightbulb-o"
+                                                          style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                                                    Only inventory managers can create and edit the reasons from the
+                                                    Configuration.
+                                                </li>
+                                                <li style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                                                    <span class="fa fa-lightbulb-o"
+                                                          style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                                                    The option "Create" as well as "Create and Edit" are disabled on the
+                                                    views.
+                                                </li>
+                                                <li style="padding: 20px;margin-bottom: 20px;font-size: 16px;color: #212121;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 0.25rem !important;">
+                                                    <span class="fa fa-lightbulb-o"
+                                                          style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                                                    The reason and note will be read-only when the Scrap is "done", but
+                                                    just in the view so as to be able to import/update the data.
+                                                </li>
+                                            </div>
+
+                                            <!-- sub TAB -->
+
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!-- tab 3 -->
+                            <!-- tab 3 -->
+                            <!-- tab 4 -->
+                            <!-- tab 4 -->
+                            <!-- tab 5 -->
+                            <div id="Support" class="tab-pane fade container">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="sh_content shadow rounded bg-white"
+                                             style="padding: 20px;margin-bottom: 0px;">
+                                            <h4 class="mb-0">
+                                                <a href="mailto:apps@bitigloo.com"
+                                                   style="text-decoration: none;color: #212121;font-size: 18px;font-weight: 600;letter-spacing: 1px;">
+                                                    <span class="fa fa-envelope"
+                                                          style="color: #FF85C0;padding-right: 10px;font-size: 20px;"></span>
+                                                    Please mail us for support on
+                                                    <b style="color: #FF85C0;">apps@bitigloo.com</b>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tab 5 -->
+                        </div>
+                    </div>
+                </section>
+                <section id="sh_multi_language" style="margin: 50px 0;background-color: transparent;">
+                    <div class="container">
+                        <div class="sh_center text-center">
+                            <div class="sh_center text-center mb-3">
+                                <h4 style="font-size: 28px;font-weight: 600;color: #A7FF85;margin-bottom: 10px;">
+                                    Languages
+                                </h4>
+                                <img src="heading.png" alt="heading">
+                            </div>
+                            <div class="content">
+
+                                This module is available in two languages(English, German / Deutsch), If you want to add
+                                other language you can contact us on
+                                <a href="mailto:apps@bitigloo.com" style="color: #FF85C0;">apps@bitigloo.com</a>
+                                We accept suggest to make more accurate translations also on <a
+                                    href="mailto:apps@bitigloo.com" style="color: #FF85C0;">apps@bitigloo.com</a>.
+                                <br/>
+                                <br/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="img" style="text-align: center;">
+                                    <img class="shadow rounded" src="eng.png" title="English" alt="english"
+                                         style="object-fit: cover;margin: 10px 10px;border-radius: 0.25rem !important;"/>
+                                    <img class="shadow rounded" src="german.png" title="Germany" alt="germany"
+                                         style="object-fit: cover;margin: 10px 10px;border-radius: 0.25rem !important;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="sh_services" style="padding: 50px 0px;background-color: transparent;">
+                        <div class="container">
+                            <div class="sh_center text-center mb-5">
+                                <h4 style="font-size: 28px;font-weight: 600;color: #A7FF85;margin-bottom: 10px;">Our
+                                    Services
+                                </h4>
+                                <img src="heading.png" alt="heading"/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <div class="box p-4 shadow rounded mb-2"
+                                         style="background-color: #A7FF85;border: 2px solid #A7FF85;border-radius: 0.25rem !important;">
+                                        <a href="https://www.bitigloo.com/r/Lzo" target="_blank"
+                                           style="text-decoration: none;">
+                                            <i class="fa fa-gears m-3 fa-5x"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                   style="font-size: 18px;color: #212529;font-weight: bold;">Odoo
+                                                    Implementation
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <div class="box p-4 shadow rounded mb-2"
+                                         style="background-color: #383E45;border: 2px solid #383E45;border-radius: 0.25rem !important;">
+                                        <a href="https://www.bitigloo.com/r/Lzo" target="_blank"
+                                           style="text-decoration: none;">
+                                            <i class="fa fa-comments m-3 fa-5x"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                   style="font-size: 18px;color: #FFFFFF;font-weight: bold;">Odoo
+                                                    Functionnal
+                                                    Consulting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <div class="box p-4 shadow rounded mb-2"
+                                         style="background-color: #A7FF85;border: 2px solid #A7FF85;border-radius: 0.25rem !important;">
+                                        <a href="https://www.bitigloo.com/r/Lzo" target="_blank"
+                                           style="text-decoration: none;">
+                                            <i class="fa fa-group m-3 fa-5x"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                   style="font-size: 18px;color: #212529;font-weight: bold;">Odoo
+                                                    Workshop & Training
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <div class="box p-4 shadow rounded mb-2"
+                                         style="background-color: #383E45;border: 2px solid #383E45;border-radius: 0.25rem !important;">
+                                        <a href="https://www.bitigloo.com/r/Lzo" target="_blank"
+                                           style="text-decoration: none;">
+                                            <i class="fa fa-rocket m-3 fa-5x"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                   style="font-size: 18px;color: #FFFFFF;font-weight: bold;">Odoo
+                                                    Migration
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="sh_bg_cover" style="padding:40px 0px;background-color: transparent;">
+                        <div class="container">
+
+                            <div class="sh_center text-center row">
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12"></div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                                    <a class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
+                                       style="border-width: 1px;border-style: solid;border-color: #A7FF85;color: #212529;position: relative; overflow: hidden;text-decoration: none;border-radius: 0px;font-size: 20px;font-weight: bold;width: 100%;background-color: #A7FF85;border-radius: 0.25rem !important;"
+                                       href="https://www.bitigloo.com/appointment" target="_blank">
+                                        <span class="fa fa-calendar mr-3"
+                                              style="font-size: 30px;color: #212529;"></span>
+                                        <span class="align-middle">Google meet</span>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                                    <a class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
+                                       style="border-width: 1px;border-style: solid;border-color: #FF85C0;color: #fff;position: relative; overflow: hidden;text-decoration: none;border-radius: 0px;font-size: 20px;font-weight: bold;width: 100%;background-color: #FF85C0;border-radius: 0.25rem !important;"
+                                       href="mailto:apps@bitigloo.com" target="_blank">
+                                        <span class="fa fa-envelope mr-3" style="font-size: 30px;color: #fff;"></span>
+                                        <span class="align-middle">Email</span>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12"></div>
+                            </div>
+                        </div>
+                    </section>
+    </body>
+</html>
