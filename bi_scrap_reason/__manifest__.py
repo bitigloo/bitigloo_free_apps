@@ -24,7 +24,7 @@ it adds a Note field on those views.
         "views/stock_scrap_reason_views.xml",
     ],
     "installable": True,
-    "images": ['static/description/background.svg'],
+    "images": ['static/description/background.png'],
     "license": "GPL-3 or any later version",
     "support": "apps@bitigloo.com",
 }
