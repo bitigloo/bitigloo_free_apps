@@ -19,6 +19,6 @@
     "installable": True,
     "images": ['static/description/invoice_title_background.png'],
     "application": False,
-    "license": "GPL-3 or any later version",
+    "license": "LGPL-3",
     "support": "apps@bitigloo.com"
 }
