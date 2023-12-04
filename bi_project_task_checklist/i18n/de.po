@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_project_task_checklist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-02 17:50+0000\n"
+"PO-Revision-Date: 2023-11-02 17:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__assignee_ids
+msgid "Assignees"
+msgstr "Abtretungsempfänger"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__available_on_product
+msgid "Available on Product?"
+msgstr "Verfügbar für das Produkt?"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_project_task_type__block_on_checklist
+msgid "Block On Checklist"
+msgstr "Checkliste zum Blockieren"
+
+#. module: bi_project_task_checklist
+#: model:ir.model,name:bi_project_task_checklist.model_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_project_task__checklist_ids
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.task_inherit_view_checklist
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_search
+msgid "Checklist"
+msgstr "Checkliste"
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_search
+msgid "Checklist Item"
+msgstr "Checklistenpunkt"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__item_description
+msgid "Checklist Item Description"
+msgstr "Beschreibung des Checklistenpunktes"
+
+#. module: bi_project_task_checklist
+#: model:ir.actions.act_window,name:bi_project_task_checklist.action_checklist_items
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__item_ids
+#: model:ir.ui.menu,name:bi_project_task_checklist.checklist_items
+msgid "Checklist Items"
+msgstr "Checklistenpunkte"
+
+#. module: bi_project_task_checklist
+#: model:ir.model,name:bi_project_task_checklist.model_checklist_template
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_product_product__checklist_template_id
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_product_template__checklist_template_id
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_project_task__checklist_template_id
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_template_search
+msgid "Checklist Template"
+msgstr "Checklisten-Vorlage"
+
+#. module: bi_project_task_checklist
+#: model:ir.model,name:bi_project_task_checklist.model_checklist_template_items
+msgid "Checklist Template Items"
+msgstr "Checklisten-Vorlagenpunkte"
+
+#. module: bi_project_task_checklist
+#: model:ir.actions.act_window,name:bi_project_task_checklist.action_checklist_templates
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__checklist_template
+#: model:ir.ui.menu,name:bi_project_task_checklist.checklist_templates
+msgid "Checklist Templates"
+msgstr "Checklisten-Vorlagen"
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.actions.act_window,help:bi_project_task_checklist.action_checklist_items
+msgid "Create a new checklist item"
+msgstr "Erstellen Sie einen neuen Checklistenpunkt"
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.actions.act_window,help:bi_project_task_checklist.action_checklist_templates
+msgid "Create a new checklist template"
+msgstr "Erstellen Sie eine neue Checklistenvorlage"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__create_uid
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__create_uid
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__create_date
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__create_date
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__description
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__display_name
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__display_name
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__checkbox
+msgid "Done"
+msgstr "Erledigt"
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_search
+msgid "Group by..."
+msgstr "Gruppiere nach..."
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__id
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__id
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__id
+msgid "ID"
+msgstr "ID"
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_template_form
+msgid "Items"
+msgstr "Punkte"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist____last_update
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template____last_update
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__write_uid
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__write_uid
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__write_date
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__write_date
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_search
+msgid "My Tasks"
+msgstr "Meine Aufgaben"
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_form
+msgid "Please write the checklist item"
+msgstr "Bitte schreiben Sie den Checklistenpunkt"
+
+#. module: bi_project_task_checklist
+#: model:ir.model,name:bi_project_task_checklist.model_product_template
+msgid "Product"
+msgstr "Produkt"
+
+#. module: bi_project_task_checklist
+#: model:ir.model,name:bi_project_task_checklist.model_product_product
+msgid "Product Variant"
+msgstr "Produktvariante"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__project_id
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_search
+msgid "Project"
+msgstr "Projekt"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__sequence
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template_items__sequence
+msgid "Sequence"
+msgstr "Reihenfolge"
+
+#. module: bi_project_task_checklist
+#: model_terms:ir.ui.view,arch_db:bi_project_task_checklist.view_checklist_search
+msgid "Status"
+msgstr "Status"
+
+#. module: bi_project_task_checklist
+#: model:ir.model,name:bi_project_task_checklist.model_project_task
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__task_id
+msgid "Task"
+msgstr "Aufgabe"
+
+#. module: bi_project_task_checklist
+#: model:ir.model,name:bi_project_task_checklist.model_project_task_type
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist__task_stage_id
+msgid "Task Stage"
+msgstr "Aufgabenstufe"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,field_description:bi_project_task_checklist.field_checklist_template__name
+msgid "Template Name"
+msgstr "Vorlagenname"
+
+#. module: bi_project_task_checklist
+#. odoo-python
+#: code:addons/bi_project_task_checklist/models/project_task.py:0
+#, python-format
+msgid "all the checklist must be done before to move tho the next stage"
+msgstr "Vor dem Übergang zur nächsten Stufe müssen alle Checklistenpunkte abgearbeitet werden"
+
+#. module: bi_project_task_checklist
+#: model:ir.model.fields,help:bi_project_task_checklist.field_project_task_type__block_on_checklist
+msgid ""
+"if checked we cannot go to this stage until all the checklist are done."
+msgstr ""
+"Wenn diese Option aktiviert ist, können Sie nicht zu dieser Stufe fortfahren, bis die gesamte Checkliste abgeschlossen ist."
