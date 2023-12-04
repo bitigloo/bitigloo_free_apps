@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Checklists Form -->
+    <record id="view_checklist_form" model="ir.ui.view">
+        <field name="name">checklist.form</field>
+        <field name="model">checklist</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="description" placeholder="Please write the checklist item"/>
+                            <field name="task_id"/>
+                            <field name="task_stage_id"/>
+                            <field name="project_id"/>
+                        </group>
+                        <group>
+                            <field name="checkbox"/>
+                            <field name="assignee_ids" widget="many2many_tags" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Checklist Tree -->
+    <record id="view_checklist_tree" model="ir.ui.view">
+        <field name="name">checklist.tree</field>
+        <field name="model">checklist</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="description"/>
+                <field name="project_id"/>
+                <field name="task_id"/>
+                <field name="task_stage_id"/>
+                <field name="assignee_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Checklist search view -->
+    <record id="view_checklist_search" model="ir.ui.view">
+        <field name="name">checklist.search</field>
+        <field name="model">checklist</field>
+        <field name="arch" type="xml">
+            <search string="Checklist">
+                <field name="description" string="Checklist Item"/>
+                <field name="task_id"/>
+                <field name="project_id"/>
+                <filter string="My Tasks" name="my_tasks" domain="[('assignee_ids','in',uid)]"/>
+                <group expand="0" string="Group by...">
+                    <filter string="Project" name="project" domain="[]" context="{'group_by':'project_id'}"/>
+                    <filter string="Status" name="task_stage" domain="[]" context="{'group_by':'task_stage_id'}"/>
+                </group>
+            </search>
+        </field>
+     </record>
+
+
+<!-- Checklist Action -->
+    <record model="ir.actions.act_window" id="action_checklist_items">
+        <field name="name">Checklist Items</field>
+        <field name="res_model">checklist</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new checklist item
+            </p>
+        </field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem id="checklist_items" name="Checklist Items" parent="project.menu_project_report" action="action_checklist_items"/>
+</odoo>

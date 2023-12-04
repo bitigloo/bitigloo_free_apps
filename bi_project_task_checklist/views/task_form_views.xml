@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Checklist Inherit View on Project Task Form View -->
+    <record id="task_inherit_view_checklist" model="ir.ui.view">
+        <field name="name">task.inherit.checklist</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_ids']" position="after">
+                <field name="checklist_template_id"/>
+            </xpath>
+            <xpath expr="//page[@name='extra_info']" position="before">
+                <page string="Checklist" id="checklist_tab">
+                    <field name="checklist_ids" mode="tree">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="description"/>
+                            <field name="checkbox" widget="checkbox" readonly="0" width="100px"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
