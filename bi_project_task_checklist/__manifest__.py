@@ -21,6 +21,6 @@
     "installable": True,
     "images": ['static/description/project_task_checklist_background.png'],
     "application": False,
-    "license": "GPL-3 or any later version",
+    "license": "LGPL-3",
     "support": "apps@bitigloo.com"
 }
