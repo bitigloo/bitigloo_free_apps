@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_move_form_view_inherit" model="ir.ui.view">
+        <field name="name">account_move_form_inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="payment_reference" position="after">
+                <field name="invoice_title" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+            </field>
+            <field name="narration" position="after">
+                <field name="invoice_note" placeholder="Invoice Notes" colspan="2" nolabel="1"/>
+            </field>
+        </field>
+    </record>
+</odoo>

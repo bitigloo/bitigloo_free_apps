@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Invoice Title Form -->
+    <record id="view_invoice_title_form" model="ir.ui.view">
+        <field name="name">invoice.title.form</field>
+        <field name="model">invoice.title</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Invoice Title" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="Write the invoice title."/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page name="invoice_note" string="Invoice Note">
+                            <field name="invoice_note" widget="html" placeholder="You can write the note in HTML format" options="{'codeview': true}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Invoice Title Tree -->
+    <record id="view_invoice_title_tree" model="ir.ui.view">
+        <field name="name">invoice.title.tree</field>
+        <field name="model">invoice.title</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+<!-- Invoice Title Action -->
+    <record model="ir.actions.act_window" id="action_invoice_titles">
+        <field name="name">Invoice Titles</field>
+        <field name="res_model">invoice.title</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new invoice title
+            </p><p>
+                You must define a title to assign it to an invoice.
+            </p>
+        </field>
+    </record>
+
+    <!-- Top menu item -->
+<!--    <menuitem id="invoice_titles" name="Invoice Titles" parent="account.menu_account_config" action="action_invoice_titles"/>-->
+    <menuitem id="invoice_titles" name="Invoice Titles" parent="account.menu_finance_configuration" action="action_invoice_titles"/>
+</odoo>

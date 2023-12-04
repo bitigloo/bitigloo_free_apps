@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_view_invoice_title" model="ir.ui.view">
+        <field name="name">res.config.settings.view.invoice.title</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="55"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='invoicing_settings']" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" id="printing_invoice_title">
+                    <div class="o_setting_left_pane">
+
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Print Invoice Title</span>
+                        <div class="text-muted">
+                            Define position(according Name) where you want to print invoice title
+                        </div>
+                        <div class="mt-16">
+                            <field name="invoice_title_position_selection" class="o_light_label" widget="radio"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

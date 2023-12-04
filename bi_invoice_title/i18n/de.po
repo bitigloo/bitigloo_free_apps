@@ -1,0 +1,193 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_invoice_title
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-30 07:21+0000\n"
+"PO-Revision-Date: 2023-10-30 07:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.res_config_settings_view_invoice_title
+msgid "<span class=\"o_form_label\">Print Invoice Title</span>"
+msgstr "<span class=\"o_form_label\">Rechnungstitel drucken</span>"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_external_layout_din5008_view_inherit
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_invoice_document_view_inherit
+msgid "<strong>Invoice Title: </strong>"
+msgstr "<strong>Rechnungstitel: </strong>"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields.selection,name:bi_invoice_title.selection__res_config_settings__invoice_title_position_selection__after
+msgid "After"
+msgstr "Nachher"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields.selection,name:bi_invoice_title.selection__res_config_settings__invoice_title_position_selection__before
+msgid "Before"
+msgstr "Vorher"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_invoice_document_view_inherit
+msgid "Cancelled Invoice"
+msgstr "Stornorechnung"
+
+#. module: bi_invoice_title
+#: model:ir.model,name:bi_invoice_title.model_base_document_layout
+msgid "Company Document Layout"
+msgstr "Dokumentenlayout des Unternehmens"
+
+#. module: bi_invoice_title
+#: model:ir.model,name:bi_invoice_title.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: bi_invoice_title
+#: model_terms:ir.actions.act_window,help:bi_invoice_title.action_invoice_titles
+msgid "Create a new invoice title"
+msgstr "Erstellen Sie einen neuen Rechnungstitel"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_invoice_document_view_inherit
+msgid "Credit Note"
+msgstr "Gutschrift"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.res_config_settings_view_invoice_title
+msgid "Define position where you want to print invoice title"
+msgstr "Definieren Sie die Position, an der Sie den Rechnungstitel drucken möchten"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_invoice_document_view_inherit
+msgid "Draft Invoice"
+msgstr "Rechnungsentwurf"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__id
+msgid "ID"
+msgstr ""
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_invoice_document_view_inherit
+msgid "Invoice"
+msgstr "Rechnung"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.view_invoice_title_form
+msgid "Invoice Note"
+msgstr "Rechnungsnotiz"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.account_move_form_view_inherit
+msgid "Invoice Notes"
+msgstr "Rechnungsnotizen"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_bank_statement_line__invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_move__invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_payment__invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__name
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.view_invoice_title_form
+msgid "Invoice Title"
+msgstr "Rechnungstitel"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_res_config_settings__invoice_title_position_selection
+msgid "Invoice Title Display"
+msgstr "Anzeige des Rechnungstitels"
+
+#. module: bi_invoice_title
+#: model:ir.actions.act_window,name:bi_invoice_title.action_invoice_titles
+#: model:ir.model,name:bi_invoice_title.model_invoice_title
+#: model:ir.ui.menu,name:bi_invoice_title.invoice_titles
+msgid "Invoice Titles"
+msgstr "Rechnungstitel"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_bank_statement_line__is_layout_to_print
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_move__is_layout_to_print
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_payment__is_layout_to_print
+msgid "Is Layout To Print"
+msgstr "Ist das zu druckende Layout"
+
+#. module: bi_invoice_title
+#: model:ir.model,name:bi_invoice_title.model_account_move
+msgid "Journal Entry"
+msgstr "Journalbuchung"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bi_invoice_title
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_bank_statement_line__invoice_note
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_move__invoice_note
+#: model:ir.model.fields,field_description:bi_invoice_title.field_account_payment__invoice_note
+#: model:ir.model.fields,field_description:bi_invoice_title.field_invoice_title__invoice_note
+msgid "Note"
+msgstr "Notiz"
+
+#. module: bi_invoice_title
+#: model:ir.model.fields.selection,name:bi_invoice_title.selection__res_config_settings__invoice_title_position_selection__replace
+msgid "Replace"
+msgstr "Ersetzen"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_invoice_document_view_inherit
+msgid "Vendor Bill"
+msgstr "Lieferantenrechnung"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.report_invoice_document_view_inherit
+msgid "Vendor Credit Note"
+msgstr "Kreditorengutschrift"
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.view_invoice_title_form
+msgid "Write the invoice title."
+msgstr "Schreiben Sie den Rechnungstitel."
+
+#. module: bi_invoice_title
+#: model_terms:ir.ui.view,arch_db:bi_invoice_title.view_invoice_title_form
+msgid "You can write the note in HTML format"
+msgstr "Sie können die Notiz im HTML-Format schreiben"
+
+#. module: bi_invoice_title
+#: model_terms:ir.actions.act_window,help:bi_invoice_title.action_invoice_titles
+msgid "You must define a title to assign it to an invoice."
+msgstr "Sie müssen einen Titel definieren, um ihn einer Rechnung zuzuordnen."
