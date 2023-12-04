@@ -17,6 +17,7 @@
         "report/report_invoice.xml",
     ],
     "installable": True,
+    "images": ['static/description/invoice_title_background.png'],
     "application": False,
     "license": "GPL-3 or any later version",
     "support": "apps@bitigloo.com"
