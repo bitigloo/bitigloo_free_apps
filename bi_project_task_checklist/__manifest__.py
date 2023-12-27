@@ -18,6 +18,7 @@
         "views/product_template_form_views.xml",
         "views/task_type_edit_views.xml",
     ],
+    "images": ['static/description/project_task_checklist_background.png'],
     "installable": True,
     "application": False,
     "license": "GPL-3 or any later version",
