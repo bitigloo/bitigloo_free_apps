@@ -15,7 +15,8 @@
                         <tree editable="bottom">
                             <field name="sequence" widget="handle"/>
                             <field name="description"/>
-                            <field name="checkbox" widget="checkbox" readonly="0" width="100px"/>
+                            <field name="note"/>
+                            <field name="checkbox" widget="checkbox"/>
                         </tree>
                     </field>
                 </page>

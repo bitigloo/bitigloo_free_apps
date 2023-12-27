@@ -17,6 +17,7 @@
                         <group>
                             <field name="checkbox"/>
                             <field name="assignee_ids" widget="many2many_tags" readonly="1"/>
+                            <field name="note"/>
                         </group>
                     </group>
                 </sheet>
@@ -35,6 +36,8 @@
                 <field name="task_id"/>
                 <field name="task_stage_id"/>
                 <field name="assignee_ids" widget="many2many_tags"/>
+                <field name="checkbox"/>
+                <field name="note" optional="hide"/>
             </tree>
         </field>
     </record>
