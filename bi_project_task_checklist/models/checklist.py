@@ -8,6 +8,7 @@ class Checklist(models.Model):
     _description = 'Checklist'
 
     description = fields.Char(string='Description', required=True)
+    note = fields.Char(string='Note')
     sequence = fields.Integer(string="Sequence", default=10)
     checkbox = fields.Boolean(string='Done', default=False)
     task_id = fields.Many2one('project.task', string='Task')

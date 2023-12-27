@@ -3,7 +3,7 @@
 
 {
     "name": "Project Task Checklist - bitigloo",
-    "version": "16.0.1.0.0",
+    "version": "16.0.2.0.0",
     "category": "Sales",
     "summary": "Module Customizations for project app, to add checklist on the tasks",
     "description": """Some Customizations for project app, to add checklist on the tasks""",
@@ -19,8 +19,7 @@
         "views/task_type_edit_views.xml",
     ],
     "installable": True,
-    "images": ['static/description/project_task_checklist_background.png'],
     "application": False,
-    "license": "LGPL-3",
+    "license": "GPL-3 or any later version",
     "support": "apps@bitigloo.com"
 }
