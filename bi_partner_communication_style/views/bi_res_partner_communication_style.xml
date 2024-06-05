@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bi_res_partner_communication_style" model="ir.ui.view">
+        <field name="name">res.partner.communication.style</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='lang']" position="after">
+                <field name="communication_style"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
