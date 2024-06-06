@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_partner_communication_style
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-03 13:49+0000\n"
+"PO-Revision-Date: 2024-06-03 13:49+0000\n"
+"Last-Translator: bitigloo GmbH\n"
+"Language-Team: bitigloo GmbH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bi_partner_communication_style
+#: model:ir.model.fields,field_description:bi_partner_communication_style.field_res_partner__communication_style
+#: model:ir.model.fields,field_description:bi_partner_communication_style.field_res_users__communication_style
+msgid "Communication Style"
+msgstr "Kommunikationsstil"
+
+#. module: bi_partner_communication_style
+#: model:ir.model,name:bi_partner_communication_style.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: bi_partner_communication_style
+#: model:ir.model.fields.selection,name:bi_partner_communication_style.selection__res_partner__communication_style__formal
+msgid "Formal"
+msgstr "Formell"
+
+#. module: bi_partner_communication_style
+#: model:ir.model.fields.selection,name:bi_partner_communication_style.selection__res_partner__communication_style__informal
+msgid "Informal"
+msgstr "Informell"
+
+#. module: bi_partner_communication_style
+#: model:ir.model.fields,help:bi_partner_communication_style.field_res_partner__communication_style
+#: model:ir.model.fields,help:bi_partner_communication_style.field_res_users__communication_style
+msgid ""
+"You can use this field to identify how to communicate with the partner, e.g. dynamically on the reports or email templates."
+msgstr ""
+"Sie können dieses Feld verwenden, um festzulegen, wie mit dem Partner kommuniziert werden soll, z. B. dynamisch in den Berichten oder E-Mail-Vorlagen."
