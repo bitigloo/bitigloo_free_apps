@@ -26,11 +26,11 @@
     </record>
 
     <!-- Checklist Tree -->
-    <record id="view_checklist_tree" model="ir.ui.view">
-        <field name="name">checklist.tree</field>
+    <record id="view_checklist_list" model="ir.ui.view">
+        <field name="name">checklist.list</field>
         <field name="model">checklist</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="description"/>
                 <field name="project_id"/>
                 <field name="task_id"/>
@@ -38,7 +38,7 @@
                 <field name="assignee_ids" widget="many2many_tags"/>
                 <field name="checkbox"/>
                 <field name="note" optional="hide"/>
-            </tree>
+            </list>
         </field>
     </record>
 

@@ -17,11 +17,11 @@
                     </group>
                     <notebook>
                         <page string="Items" id="checklist_template_items_tab">
-                            <field name="item_ids" mode="tree">
-                                <tree editable="bottom">
+                            <field name="item_ids" mode="list">
+                                <list editable="bottom">
                                     <field name="sequence" widget="handle" />
                                     <field name="item_description"/>
-                                </tree>
+                                </list>
                             </field>
                         </page>
                     </notebook>
@@ -30,15 +30,15 @@
         </field>
     </record>
 
-    <!-- Checklist Template Tree -->
-    <record id="view_checklist_template_tree" model="ir.ui.view">
-        <field name="name">checklist.template.tree</field>
+    <!-- Checklist Template List -->
+    <record id="view_checklist_template_list" model="ir.ui.view">
+        <field name="name">checklist.template.list</field>
         <field name="model">checklist.template</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="available_on_product" width="100px" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -58,7 +58,7 @@
     <record model="ir.actions.act_window" id="action_checklist_templates">
         <field name="name">Checklist Templates</field>
         <field name="res_model">checklist.template</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create a new checklist template

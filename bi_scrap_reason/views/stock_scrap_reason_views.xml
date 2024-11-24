@@ -35,15 +35,15 @@
         </form> 
     </field>
 </record>
-    <!-- Scrap Reason Tree View -->
-    <record id="stock_scrap_reason_tree_view" model="ir.ui.view">
-        <field name="name">stock.scrap.reason.tree</field>
+    <!-- Scrap Reason List View -->
+    <record id="stock_scrap_reason_list_view" model="ir.ui.view">
+        <field name="name">stock.scrap.reason.list</field>
         <field name="model">stock.scrap.reason</field>
         <field name="arch" type="xml">
-            <tree string="Scrap Reasons" default_order="sequence, id">
+            <list string="Scrap Reasons" default_order="sequence, id">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>
-            </tree> 
+            </list>
         </field>
     </record>
 
@@ -52,7 +52,7 @@
         <field name="name">Scrap Reasons</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">stock.scrap.reason</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
           <p class="o_view_nocontent_smiling_face">
             Scrap Reasons
