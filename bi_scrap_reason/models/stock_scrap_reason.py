@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, _
+from odoo import models, fields
 
 
 # ---------------------------------------------------------------------
@@ -13,7 +13,7 @@ class StockScrapReason(models.Model):
     _order = "sequence asc"
 
     sequence = fields.Integer()
-    name = fields.Char(string=_("Reason"))
+    name = fields.Char(string="Reason")
     scrap_order_count = fields.Integer(compute="_compute_scrap_order_count")
 
     def _compute_scrap_order_count(self):

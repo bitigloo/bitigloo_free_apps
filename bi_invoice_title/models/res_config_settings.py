@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import fields, models, _
+from odoo import fields, models
 
 
 # ---------------------------------------------------------
@@ -14,6 +14,6 @@ class ResConfigSettings(models.TransientModel):
     invoice_title_position_selection = fields.Selection([
         ('before', 'Before'),
         ('replace', 'Replace'),
-        ('after', 'After')], string=_("Invoice Title Display"),
+        ('after', 'After')], string="Invoice Title Display",
         required=True, default='before',
         config_parameter='bi_invoice_title.invoice_title_position_selection')

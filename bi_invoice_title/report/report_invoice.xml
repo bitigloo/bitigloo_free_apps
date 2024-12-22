@@ -4,21 +4,25 @@
         <xpath expr="//t[@t-set='layout_document_title']" position="replace">
             <t t-if="o._get_invoice_title() in ['before','after'] and o.invoice_title and
                      o.company_id.external_report_layout_id.xml_id != 'l10n_din5008.external_layout_din5008'">
-                <t t-if="o._get_invoice_title() == 'before' and o.invoice_title">
+                <t t-if="o._get_invoice_title() == 'before'">
                     <small>
-                        <span t-field="o.invoice_title"/>
+                        <span t-field="o.invoice_title"/>TTTTTTTTTTT
                     </small>
                 </t>
                 <t t-set="layout_document_title">
+                    <span t-if="not proforma"/>
+                    <span t-else="">PROFORMA</span>
                     <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
-                    <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
-                    <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
-                    <span t-if="o.move_type == 'out_refund'">Credit Note</span>
-                    <span t-if="o.move_type == 'in_refund'">Vendor Credit Note</span>
-                    <span t-if="o.move_type == 'in_invoice'">Vendor Bill</span>
-                    <span t-if="o.name != '/'" t-field="o.name"/>
+                    <span t-elif="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                    <span t-elif="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                    <span t-elif="o.move_type == 'out_refund' and o.state == 'posted'">Credit Note</span>
+                    <span t-elif="o.move_type == 'out_refund' and o.state == 'draft'">Draft Credit Note</span>
+                    <span t-elif="o.move_type == 'out_refund' and o.state == 'cancel'">Cancelled Credit Note</span>
+                    <span t-elif="o.move_type == 'in_refund'">Vendor Credit Note</span>
+                    <span t-elif="o.move_type == 'in_invoice'">Vendor Bill</span>
+                    <span t-if="o.name != '/'" t-field="o.name">INV/2023/0001</span>
                 </t>
-                <t t-if="o._get_invoice_title() == 'after' and o.invoice_title">
+                <t t-if="o._get_invoice_title() == 'after'">
                     <small>
                         <span t-field="o.invoice_title"/>
                     </small>
@@ -26,13 +30,17 @@
             </t>
             <t t-if="o._get_invoice_title() == 'replace' and o.invoice_title">
                 <t t-set="layout_document_title">
+                    <span t-if="not proforma"/>
+                    <span t-else="">PROFORMA</span>
                     <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'" t-field="o.invoice_title"/>
-                    <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
-                    <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
-                    <span t-if="o.move_type == 'out_refund'">Credit Note</span>
-                    <span t-if="o.move_type == 'in_refund'">Vendor Credit Note</span>
-                    <span t-if="o.move_type == 'in_invoice'">Vendor Bill</span>
-                    <span t-if="o.name != '/'" t-field="o.name"/>
+                    <span t-elif="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                    <span t-elif="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                    <span t-elif="o.move_type == 'out_refund' and o.state == 'posted'">Credit Note</span>
+                    <span t-elif="o.move_type == 'out_refund' and o.state == 'draft'">Draft Credit Note</span>
+                    <span t-elif="o.move_type == 'out_refund' and o.state == 'cancel'">Cancelled Credit Note</span>
+                    <span t-elif="o.move_type == 'in_refund'">Vendor Credit Note</span>
+                    <span t-elif="o.move_type == 'in_invoice'">Vendor Bill</span>
+                    <span t-if="o.name != '/'" t-field="o.name">INV/2023/0001</span>
                 </t>
             </t>
         </xpath>
@@ -50,7 +58,7 @@
     <template id="report_external_layout_din5008_view_inherit" inherit_id="l10n_din5008.external_layout_din5008">
         <xpath expr="//h2" position="replace">
             <t t-if="o and o._get_invoice_title() in ['before','after'] and o.invoice_title">
-            <t t-if="o and o._get_invoice_title() == 'before' and o.invoice_title">
+            <t t-if="o and o._get_invoice_title() == 'before'">
                 <small style="margin-left: 21px; margin-top: 20px; position: fixed;">
                     <span t-field="o.invoice_title"/>
                 </small>
@@ -64,7 +72,7 @@
                         <span t-elif="'name' in o" t-field="o.name"/>
                     </span>
                 </h2>
-            <t t-if="o and o._get_invoice_title() == 'after' and o.invoice_title">
+            <t t-if="o and o._get_invoice_title() == 'after'">
                 <small style="margin-left: 21px;">
                     <span t-field="o.invoice_title"/>
                 </small>
