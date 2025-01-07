@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _
+from odoo import api, fields, models
 
 
 # ---------------------------------------------------------
@@ -11,8 +11,8 @@ from odoo import api, fields, models, _
 class AccountMove(models.Model):
     _inherit = "account.move"
 
-    invoice_title = fields.Many2one("invoice.title", string=_("Invoice Title"))
-    invoice_note = fields.Html(_("Note"))
+    invoice_title = fields.Many2one("invoice.title", string="Invoice Title")
+    invoice_note = fields.Html("Note")
     is_layout_to_print = fields.Boolean(default=True)
 
     @api.onchange('invoice_title')

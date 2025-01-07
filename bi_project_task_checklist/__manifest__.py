@@ -1,7 +1,7 @@
 # Copyright 2024 bitigloo <http://www.bitigloo.com>
 {
     "name": "Project Task Checklist - bitigloo GmbH",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Sales",
     "summary": "Module Customizations for project app, to add checklist on the tasks",
     "description": """Some Customizations for project app, to add checklist on the tasks""",

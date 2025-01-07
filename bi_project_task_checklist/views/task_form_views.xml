@@ -11,13 +11,13 @@
             </xpath>
             <xpath expr="//page[@name='extra_info']" position="before">
                 <page string="Checklist" id="checklist_tab">
-                    <field name="checklist_ids" mode="tree">
-                        <tree editable="bottom">
+                    <field name="checklist_ids" mode="list">
+                        <list editable="bottom">
                             <field name="sequence" widget="handle"/>
                             <field name="description"/>
                             <field name="note"/>
                             <field name="checkbox" widget="checkbox"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

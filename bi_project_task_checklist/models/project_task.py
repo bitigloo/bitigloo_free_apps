@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import fields, models, api, _
+from odoo import fields, models, api
 from odoo.exceptions import UserError
 
 
@@ -33,5 +33,5 @@ class ProjectTask(models.Model):
         res = super(ProjectTask, self).write(vals)
         if 'stage_id' in vals:
             if self.stage_id.block_on_checklist and not all(self.checklist_ids.mapped('checkbox')):
-                raise UserError(_("All the checklist items must be done before moving to the next stage."))
+                raise UserError("All the checklist items must be done before moving to the next stage.")
         return res

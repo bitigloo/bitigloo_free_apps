@@ -24,13 +24,13 @@
     </record>
 
     <!-- Invoice Title Tree -->
-    <record id="view_invoice_title_tree" model="ir.ui.view">
-        <field name="name">invoice.title.tree</field>
+    <record id="view_invoice_title_list" model="ir.ui.view">
+        <field name="name">invoice.title.list</field>
         <field name="model">invoice.title</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -38,7 +38,7 @@
     <record model="ir.actions.act_window" id="action_invoice_titles">
         <field name="name">Invoice Titles</field>
         <field name="res_model">invoice.title</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create a new invoice title

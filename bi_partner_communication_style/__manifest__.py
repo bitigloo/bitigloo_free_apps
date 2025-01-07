@@ -1,6 +1,6 @@
 {
     "name": "Partner (Contact) Communication Style - bitigloo GmbH",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Contact",
     "summary": "Defining whether to communicate with the partner formally or informally.",
     "description": """Defining whether to communicate with the partner formally or informally.
