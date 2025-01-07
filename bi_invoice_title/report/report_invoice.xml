@@ -83,8 +83,7 @@
                     <span t-if="not o and not docs"><t t-esc="company.l10n_din5008_document_title"/></span>
                     <span t-else="">
                         <t t-set="o" t-value="docs[0]" t-if="not o"/>
-                        <span t-if="'invoice_title' in o"><t
-                                t-esc="o.invoice_title.name"/></span>
+                        <span t-if="'invoice_title' in o"><t t-esc="o.invoice_title.name"/></span>
                         <span t-elif="'invoice_title' in o" t-field="o.invoice_title"/>
                     </span>
                 </h2>
