@@ -6,7 +6,7 @@
                      o.company_id.external_report_layout_id.xml_id != 'l10n_din5008.external_layout_din5008'">
                 <t t-if="o._get_invoice_title() == 'before'">
                     <small>
-                        <span t-field="o.invoice_title"/>TTTTTTTTTTT
+                        <span t-field="o.invoice_title"/>
                     </small>
                 </t>
                 <t t-set="layout_document_title">
