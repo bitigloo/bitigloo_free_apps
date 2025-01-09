@@ -1,0 +1,19 @@
+# Copyright 2023 bitigloo <http://www.bitigloo.com>
+
+{
+    "name": "Automated Activity on Task Stage - bitigloo",
+    "version": "17.0.1.0",
+    "category": "Project",
+    "author": "bitigloo GmbH",
+    "summary": "Possibility to add activity automated on a Task Stage",
+    "description": """Possibility to add activity automated on a Task Stage""",
+    "depends": [
+        "project"
+    ],
+    "data": ["views/project_task_type_views.xml"],
+    "installable": True,
+    "website": "https://www.bitigloo.com",
+    "license": "LGPL-3",
+    "images": ['static/description/Background.png'],
+    "support": "apps@bitigloo.com",
+}
