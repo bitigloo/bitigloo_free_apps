@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_lead_mobile_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.mobile.view.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='opportunity_partner']/field[@name='lost_reason_id']" position="before">
+                <field name="mobile" widget="phone"/>
+            </xpath>
+            <xpath expr="//group[@name='lead_info']" position="inside">
+                <field name="mobile" widget="phone"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
