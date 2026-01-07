@@ -23,7 +23,7 @@ This module brings back the mobile number field on partner (contact) as well as 
     "post_init_hook": "post_init_hook",
     "installable": True,
     "website": "https://www.bitigloo.com",
-    "images": ['static/description/background_v18.png'],
+    "images": ['static/description/background.png'],
     "license": "LGPL-3",
     "support": "apps@bitigloo.com",
 }
