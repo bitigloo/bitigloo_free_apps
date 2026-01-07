@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <main style="background-color: #0f0210; padding: 30px 20px 20px 20px;">
+        <section id="sh_module_header" style="background-color: #0f0210;">
+            <div class="container">
+                <div class="sh_center text-center" style='margin: 2rem 0;'>
+                    <div class="row align-items-center" style='align-items: center;'>
+                        <div class="col-lg-4 col-md-4 col-sm-12" style='text-align: left;'>
+                            <a href="https://www.bitigloo.com/r/Lzo" target="_blank">
+                                <img src='bitigloo_GmbH.svg' alt='logo' style="width: 80%;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- heading  -->
+        <section id="sh_module_heading" style="padding-top: 20px; background-color: #0f0210;">
+            <div class="container">
+                <div class="sh_center text-center">
+                    <h4
+                        style="font-size: 30px;font-weight: 600;color: #0f0210;margin-bottom: 30px; background-color: #A7FF85; border-radius: 25px; display: inline-block; padding:10px 20px;">
+                        Tag on Invoice, Bill,
+                        or any Journal Entry type
+                    </h4>
+                    <p style="color: #e8ffe1;font-size: 18px;margin: 0;letter-spacing: 1px;margin-top: 12px;">
+                        This module is written to give the user the possibility to add a tag on any journal entry (invoice, bill, credit note, refund bill).
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="sh_feature" style="padding-top: 20px;background-color: transparent;">
+            <div class="container">
+                <div class="sh_center text-center">
+                    <h4 style="font-size: 25px; font-weight: 600; margin-top: 20px; margin-bottom: 20px;color:#A7FF85">Features</h4>
+                </div>
+                <div id="Feature" class="col-md-12">
+                    <ul style="padding: 0;list-style: none;">
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 20px;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 20px !important; background-color: #383E45; box-shadow: 5px 10px #32152A !important;color: #e8ffe1;">
+                            <span class="fa fa-star"
+                                style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            creating tags as many as possible
+                        </li>
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 18px;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 20px !important; background-color: #383E45; box-shadow: 5px 10px #32152A !important;color: #e8ffe1;">
+                            <span class="fa fa-star"
+                                style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            possibility to define color for the tag
+                        </li>
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 18px;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 20px !important; background-color: #383E45; box-shadow: 5px 10px #32152A !important;color: #e8ffe1;">
+                            <span class="fa fa-star"
+                                style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            possibility to prioritize some tags by ranking them in the list view
+                        </li>
+                        <li class="shadow rounded"
+                            style="padding: 20px;margin-bottom: 20px;font-size: 18px;font-weight: 600;letter-spacing: 1px;display: block;border-radius: 20px !important; background-color: #383E45; box-shadow: 5px 10px #32152A !important;color: #e8ffe1;">
+                            <span class="fa fa-star"
+                                style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                            possibility to select many tags on the journal entries
+                        </li>
+                    </ul>
+                </div>
+                <section id="sh_tab" style="padding-top: 20px;background-color: transparent; margin-bottom: 30px;">
+                    <div class="col-md-12">
+                        <ul class="nav nav-tabs justify-content-center" role="tablist"
+                            style="justify-content: center;background-color: transparent;border: none">
+                            <li class="nav-item rounded"
+                                style="cursor:pointer; background-color: #A7FF85;color: #0f0210;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;font-weight: 600;font-size: 20px;margin: 0 2px;margin-bottom: 0;">
+                                <span class=""></span>
+                                <a class="nav-link rounded active" data-bs-toggle="tab" href="#Configuration"
+                                    style="color: #0f0210;cursor: pointer;padding: 10px 20px;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;">
+                                    <span class="fa fa-cog"></span>
+                                    Configuration
+                                </a>
+                            </li>
+                            <li class="nav-item rounded"
+                                style="cursor:pointer; background-color: #A7FF85;color: #0f0210;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;font-weight: 600;font-size: 20px;margin: 0 2px;margin-bottom: 0;">
+                                <a class="nav-link rounded" data-bs-toggle="tab" href="#HowTo"
+                                    style="color: #0f0210;cursor: pointer;padding: 10px 20px;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;">
+                                    <span class="fa fa-book"></span>
+                                    How to Use
+                                </a>
+                            </li>
+                            <li class="nav-item rounded"
+                                style="cursor:pointer; background-color: #A7FF85;color: #0f0210;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;font-weight: 600;font-size: 20px;margin: 0 2px;margin-bottom: 0;">
+                                <a class="nav-link rounded" data-bs-toggle="tab" href="#Support"
+                                    style="color: #0f0210;cursor: pointer;padding: 10px 20px;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;">
+                                    <span class="fa fa-life-bouy"></span>
+                                    Support
+                                </a>
+                            </li>
+                            <li class="nav-item rounded"
+                                style="cursor:pointer; background-color: #A7FF85;color: #0f0210;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;font-weight: 600;font-size: 20px;margin: 0 2px;margin-bottom: 0;">
+                                <a class="nav-link rounded" data-bs-toggle="tab" href="#ReleaseNotes"
+                                    style="color: #0f0210;cursor: pointer;padding: 10px 20px;border-top-left-radius: 20px !important;border-top-right-radius: 20px !important;">
+                                    <span class="fa fa-tags"></span>
+                                    Release Notes
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content shadow"
+                            style="padding-top: 30px;background-color: #383E45;padding-bottom: 30px;margin-top: 0; border-radius: 20px; box-shadow: 5px 10px #32152A !important;">
+
+                            <!-- tab 1 -->
+                            <div id="Configuration" class="tab-pane active">
+                                <section id="sh_configuration" style="background-color: #383E45;">
+                                    <div class="container">
+                                        <div class="text-center">
+                                            <p
+                                                style="color: #e8ffe1;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;letter-spacing: .5px;">
+                                                Go to Invoicing (Accounting) / Configuration / Tags / Journal Entry Tags;
+                                                Easily add a new tag.
+                                            </p>
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded" src="tag_menu.png"
+                                                    style="width: 100%;" />
+                                            </div>
+                                            <br />
+                                            <p
+                                                style="color: #e8ffe1;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;letter-spacing: .5px;">
+                                                On the list view, with the help of the handle <img src="handle.png"
+                                                    style="max-height: 1.5rem;">, you can order
+                                                the tags.
+                                            </p>
+                                            <br />
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- tab 2 -->
+                            <div id="HowTo" class="tab-pane">
+                                <section id="sh_howto" style="background-color: #383E45;">
+                                    <div class="container">
+                                        <div class="text-center">
+                                            <p
+                                                style="color: #e8ffe1;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;letter-spacing: .5px;">
+                                                Simply open any journal entry (i.e. any invoice, bill, credit note,
+                                                refund bill or other types of journL entries).
+                                                Under the tab "Other Info", after the field "To Check",
+                                                you can add your tags:
+                                            </p>
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded" src="bill.png"
+                                                    style="width: 100%;" />
+                                            </div>
+                                            <br />
+                                            <div class="col-md-12">
+                                                <img class="img-responsive rounded" src="invoice.png"
+                                                    style="width: 100%;" />
+                                            </div>
+                                            <br />
+                                            <p
+                                                style="color: #a7ff85;font-size: 20px;max-width: 75%;margin: auto;margin-bottom: 20px;margin-top: 30px !important; letter-spacing: .5px;">
+                                                Notes
+                                            </p>
+                                            <div class="col-md-12 text-center">
+                                                <ul>
+                                                    <li class=""
+                                                        style="color: #e8ffe1; padding: 5px;margin-bottom: 5px;font-size: 18px;letter-spacing: 1px;display: block;">
+                                                        <span class="fa fa-lightbulb-o"
+                                                            style="color: #FF85C0;font-weight: 600;font-size: 18px;padding-right: 10px;"></span>
+                                                           The create and edit of the tags is restricted to the account admin access group.
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- sub TAB -->
+
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!-- tab 3 -->
+                            <div id="Support" class="tab-pane fade container">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="sh_content rounded" style="padding: 20px;margin-bottom: 0px;">
+
+                                            <p style="font-size: 18px; color: #e8ffe1;">
+                                                For any feedback or support need, please:
+                                            </p>
+                                            <p>
+                                                <a href="https://www.bitigloo.com/r/rYu"
+                                                    style="text-decoration: none;font-size: 18px;letter-spacing: 1px; color: #A7FF85">
+                                                    <span class="fa fa-life-bouy"
+                                                        style="color: #FF85C0;padding-right: 10px;font-size: 20px;"></span>
+                                                    Simply use our Products Support form
+                                                    <span style="color: #FF85C0;">www.bitigloo.com/support</span>.
+                                                </a>
+                                            </p>
+                                            <p>
+                                                <a href="mailto:apps@bitigloo.com"
+                                                    style="text-decoration: none;font-size: 18px;letter-spacing: 1px; color: #A7FF85">
+                                                    <span class="fa fa-envelope"
+                                                        style="color: #FF85C0;padding-right: 10px;font-size: 20px;"></span>
+                                                    Send us an email to
+                                                    <span style="color: #FF85C0;">apps@bitigloo.com</span>.
+                                                </a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tab 4 -->
+                            <div id="ReleaseNotes" class="tab-pane container">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="sh_content rounded" style="padding: 20px;margin-bottom: 0px;">
+                                            <p style="font-size: 18px; color: #e8ffe1;">
+                                                <strong style="color: #A7FF85;">Release Update - Jan 03, 2025</strong>
+                                                <br/>
+                                                Version - 19.0.1.0.0
+                                            </p>
+                                            <ul style="color: #e8ffe1;">
+                                                <li>Migration to V19</li>
+                                                <li>Adding the possibility to search by tag in the list views</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-5" id="sh_multi_language" style="background-color: transparent;">
+                    <div class="container">
+                        <div class="sh_center text-center">
+                            <div class="sh_center text-center mb-3">
+                                <h4 style="font-size: 28px;font-weight: 600;color: #A7FF85;margin-bottom: 10px;">
+                                    Languages
+                                </h4>
+                            </div>
+                            <div class="content" style="color: #e8ffe1; font-size: 18px;">
+
+                                This module is available in two languages: English and German/Deutsch.
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="img" style="text-align: center;">
+                                    <img class="rounded" src="eng.png" title="English" alt="english"
+                                        style="object-fit: cover;margin: 10px 10px;" />
+                                    <img class="rounded" src="german.png" title="Germany" alt="germany"
+                                        style="object-fit: cover;margin: 10px 10px;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 sh_center text-center">
+                            <div class="content" style="color: #e8ffe1; font-size: 18px;">
+                                <span class="fa fa-info-circle"></span>
+                                <span> The *.pot file is also available to easily add any other language.</span>
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <section class="sh_services mt-5" style="padding: 20px;background-color: transparent;">
+                        <div class="container">
+                            <div class="sh_center text-center mb-5">
+                                <h4 style="font-size: 28px;font-weight: 600;color: #A7FF85;margin-bottom: 10px;">Our
+                                    Services
+                                </h4>
+                            </div>
+                            <div class="row shadow rounded"
+                                style="background-color: #383E45;padding: 30px 20px 20px; border-radius: 20px !important; box-shadow: 5px 10px #32152A !important;">
+                                <div class="col-md-3 text-center">
+                                    <a href="https://www.bitigloo.com/r/fSU" target="_blank"
+                                        style="text-decoration: none;">
+                                        <div class="box p-4 rounded mb-2"
+                                            style="background-color: #A7FF85;border: 2px solid #383E45;border-radius: 20px !important;">
+
+                                            <i class="fa fa-gears m-3 fa-5x" style="color: #16181b;"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                    style="font-size: 18px;color: #16181b;font-weight: bold;">
+                                                    Odoo<br>
+                                                    Implementation
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div style="background-color: #0f0210; color:#e8ffe1; border-radius: 10px; font-size: 12px;padding: 5px;">
+                                                <span>https://www.bitigloo.com/r/fSU</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 text-center" style="">
+                                    <a href="https://www.bitigloo.com/r/yEJ" target="_blank"
+                                        style="text-decoration: none;">
+                                        <div class="box p-4 rounded mb-2"
+                                            style="background-color: #383E45;border: 2px solid #A7FF85;border-radius: 20px !important;">
+
+                                            <i class="fa fa-comments m-3 fa-5x" style="color: #e8ffe1;"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                    style="font-size: 18px;color: #e8ffe1;font-weight: bold;">
+                                                    Odoo
+                                                    Functional
+                                                    Consulting
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div style="background-color: #0f0210; color:#e8ffe1; border-radius: 10px; font-size: 12px;padding: 5px;">
+                                                <span>https://www.bitigloo.com/r/yEJ</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <a href="https://www.bitigloo.com/r/01w" target="_blank"
+                                        style="text-decoration: none;">
+                                        <div class="box p-4 rounded mb-2"
+                                            style="background-color: #A7FF85;border: 2px solid #383E45;border-radius: 20px !important;">
+
+                                            <i class="fa fa-group m-3 fa-5x" style="color: #16181b;"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                    style="font-size: 18px;color: #16181b;font-weight: bold;">
+                                                    Odoo
+                                                    Workshop & Training
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div style="background-color: #0f0210; color:#e8ffe1; border-radius: 10px; font-size: 12px;padding: 5px;">
+                                                <span>https://www.bitigloo.com/r/01w</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <a href="https://www.bitigloo.com/r/2Wx" target="_blank"
+                                        style="text-decoration: none;">
+                                        <div class="box p-4 rounded mb-2"
+                                            style="background-color: #383E45;border: 2px solid #A7FF85;border-radius: 20px !important;">
+
+                                            <i class="fa fa-rocket m-3 fa-5x" style="color: #e8ffe1;"></i>
+                                            <div class="content">
+                                                <p class="mb-0"
+                                                    style="font-size: 18px;color: #e8ffe1;font-weight: bold;">
+                                                    Odoo
+                                                    Migration/Upgrade
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div style="background-color: #0f0210; color:#e8ffe1; border-radius: 10px; font-size: 12px;padding: 5px;">
+                                                <span>https://www.bitigloo.com/r/2Wx</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="sh_bg_cover" style="padding:40px 0px;background-color: transparent;">
+                        <div class="container">
+                            <div class="sh_center text-center row">
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12"></div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                                    <a class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
+                                        style="border-width: 1px;border-style: solid;border-color: #A7FF85;color: #212529;position: relative; overflow: hidden;text-decoration: none;border-top-left-radius: 20px;border-top-right-radius: 20pxpx;font-size: 18px;font-weight: bold;width: 100%;background-color: #A7FF85;border-radius: 20px !important; box-shadow: 5px 10px #32152A !important;"
+                                        href="mailto:contact@bitigloo.com?subject=Appointment" target="_blank">
+                                        <span class="fa fa-calendar mr-3"
+                                            style="font-size: 25px;color: #212529;"></span>
+                                        <span class="align-middle"> Appointment</span>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                                    <a class="shadow rounded py-3 px-4 d-flex justify-content-center align-items-center mb-2"
+                                        style="border-width: 1px;border-style: solid;border-color: #FF85C0;color: #0f0210;position: relative; overflow: hidden;text-decoration: none;border-top-left-radius: 20px;border-top-right-radius: 20pxpx;font-size: 18px;font-weight: bold;width: 100%;background-color: #FF85C0;border-radius: 20px !important; box-shadow: 5px 10px #32152A !important;"
+                                        href="mailto:apps@bitigloo.com" target="_blank">
+                                        <span class="fa fa-envelope mr-3"
+                                            style="font-size: 25px;color: #0f0210;"></span>
+                                        <span class="align-middle"> Email</span>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 col-12"></div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

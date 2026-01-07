@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="bi_view_project_task_type_form_view" model="ir.ui.view">
+        <field name="name">bi.project.task.type.form</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit"/>
+        <field name="arch" type="xml">
+            <field name="project_ids" position="after">
+                <field name="unassign"/>
+                <field name="users_to_unassign" widget="many2many_tags"
+                       invisible="unassign != 'specific'"
+                       domain="[('share', '=', False), ('active', '=', True)]"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- search inherit view-->
+    <record id="account_move_search_view_inherit_tag" model="ir.ui.view">
+        <field name="name">account.move.search.inherit.tag</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='activity_type_id']" position="after">
+                <field name="tag_ids"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="account_move_entries_search_view_inherit_tag" model="ir.ui.view">
+        <field name="name">account.move.entries.search.inherit.tag</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_move_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='journal_id']" position="after">
+                <field name="tag_ids"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- On the form view-->
+    <record id="account_move_form_view_inherit_tag" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.tag</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='accounting_info_group']" position="inside">
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </xpath>
+            <xpath expr="//group[@name='misc_group']" position="inside">
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
