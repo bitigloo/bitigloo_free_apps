@@ -3,4 +3,4 @@ from odoo import models, fields
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    mobile = fields.Char()
+    mobile = fields.Char(tracking=True)
