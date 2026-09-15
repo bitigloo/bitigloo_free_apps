@@ -2,7 +2,7 @@
 
 {
     "name": "Invoice & Bill Tags (all Journal Entry types) - bitigloo GmbH",
-    "version": "19.0.1.0",
+    "version": "1.0",
     "category": "Invoicing",
     "author": "bitigloo GmbH",
     "summary": "Add Tag to invoice, bill or any other journal entry types",
@@ -17,7 +17,7 @@ i.e. invoice, bill, credit note, refund bill, entry, etc.
         "account",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/account_move_views.xml",
         "views/account_move_tag_views.xml",
     ],

@@ -19,7 +19,7 @@ class AccountMove(models.Model):
     def onchange_invoice_note(self):
         self.ensure_one()
         if self.invoice_title:
-            self.write({'invoice_note': self.invoice_title.invoice_note})
+            self.invoice_note = self.invoice_title.invoice_note if self.invoice_title else False
 
     def _get_invoice_title(self):
         return self.company_id.invoice_title_position_selection

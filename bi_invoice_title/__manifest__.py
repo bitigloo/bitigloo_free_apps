@@ -1,14 +1,14 @@
 # Copyright 2023 bitigloo <http://www.bitigloo.com>
 {
     "name": "Invoice Title - bitigloo",
-    "version": "19.0.1.0.0",
+    "version": "1.0",
     "category": "Accounting",
     "author": "bitigloo GmbH",
     "summary": "It adds a title to the invoice (form and report).",
     "website": "https://www.bitigloo.com",
     "depends": ["account", "l10n_din5008"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/invoice_title_views.xml",
         "views/account_move_views.xml",
         "views/res_config_settings_views.xml",

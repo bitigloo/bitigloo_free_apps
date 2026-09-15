@@ -1,0 +1,4 @@
+id,name,model_id,group_id/id,operation,domain
+access_checklist,checklist user,checklist,base.group_user,crud
+access_checklist_template,checklist.template user,checklist.template,base.group_user,crud
+access_checklist_template_items,checklist.template.items user,checklist.template.items,base.group_user,crud

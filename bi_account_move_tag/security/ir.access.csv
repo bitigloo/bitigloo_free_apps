@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,operation,domain
+access_account_move_tag_user,account.move.tag.user,account.move.tag,account.group_account_invoice,r
+access_account_move_tag_manager,account.move.tag.manager,account.move.tag,account.group_account_manager,crud
