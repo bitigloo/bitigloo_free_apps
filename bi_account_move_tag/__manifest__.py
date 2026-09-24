@@ -2,7 +2,7 @@
 
 {
     "name": "Invoice & Bill Tags (all Journal Entry types) - bitigloo GmbH",
-    "version": "1.0",
+    "version": "20.0.1.0.0",
     "category": "Invoicing",
     "author": "bitigloo GmbH",
     "summary": "Add Tag to invoice, bill or any other journal entry types",

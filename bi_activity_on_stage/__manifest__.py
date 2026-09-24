@@ -2,7 +2,7 @@
 
 {
     "name": "Automated Activity on Task Stage - bitigloo",
-    "version": "1.0",
+    "version": "20.0.1.0.0",
     "category": "Project",
     "author": "bitigloo GmbH",
     "summary": "Possibility to add activity automated on a Task Stage",

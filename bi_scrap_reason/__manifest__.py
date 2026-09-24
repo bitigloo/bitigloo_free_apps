@@ -2,7 +2,7 @@
 
 {
     "name": "Add Scrap Reason & Note - bitigloo",
-    "version": "1.0",
+    "version": "20.0.1.0.0",
     "category": "Inventory",
     "author": "bitigloo GmbH",
     "summary": "Select a reason and add a note on Scrap",

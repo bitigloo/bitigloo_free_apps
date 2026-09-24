@@ -2,7 +2,7 @@
 
 {
     "name": "Auto-Unassign User On Task Stage Change - bitigloo",
-    "version": "1.0",
+    "version": "20.0.1.0.0",
     "category": "Project",
     "author": "bitigloo GmbH",
     "summary": "Allow to automatically unassign user when we change the stage",

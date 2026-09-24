@@ -1,7 +1,7 @@
 # Copyright 2023 bitigloo <http://www.bitigloo.com>
 {
     "name": "Invoice Title - bitigloo",
-    "version": "1.0",
+    "version": "20.0.1.0.0",
     "category": "Accounting",
     "author": "bitigloo GmbH",
     "summary": "It adds a title to the invoice (form and report).",

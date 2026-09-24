@@ -2,7 +2,7 @@
 
 {
     "name": "Restore Mobile Field on Partner (Contact) and Lead/Opportunity with Upgrade Script - bitigloo GmbH",
-    "version": "1.0",
+    "version": "20.0.1.0.0",
     "category": "Contact/Partner,CRM",
     "author": "bitigloo GmbH",
     "summary": "Restore Mobile Field on Partner (Contact) and Lead/Opportunity with Upgrade Script",
