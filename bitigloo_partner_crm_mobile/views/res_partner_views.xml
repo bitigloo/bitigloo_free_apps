@@ -8,19 +8,27 @@
             <xpath expr="/form/sheet//field[@name='phone']/.." position="after">
                 <div class="d-flex align-items-baseline w-md-50 gap-2">
                     <i class="oi d-none d-md-inline-flex" data-icon="smartphone" title="Mobile"/>
+                    <field name="mobile_sanitized" invisible="1"/>
+                    <field name="mobile_formatted" invisible="1"/>
                     <field name="mobile" class="w-100" widget="phone" placeholder="Mobile"/>
                 </div>
             </xpath>
             <xpath expr="//field[@name='child_ids']/kanban/templates//div[@t-if='record.phone.raw_value']" position="after">
                 <div t-if="record.mobile.raw_value">
                     <i class="oi oi-fw oi-filled me-1" data-icon="smartphone" title="Mobile"/>
-                    <field name="mobile"/>
+                    <field name="mobile" widget="phone"/>
                 </div>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/kanban/templates" position="before">
+                <field name="mobile_sanitized"/>
+                <field name="mobile_formatted"/>
             </xpath>
             <xpath expr="//field[@name='child_ids']/form/sheet//label[@for='phone']/following-sibling::div[1]" position="after">
             	<label for="mobile" class="d-md-none"/>
                 <div class="d-flex align-items-baseline w-md-50 gap-2" name="mobile">
                     <i class="oi oi-filled d-none d-md-block" data-icon="smartphone" title="Mobile"/>
+                    <field name="mobile_sanitized" invisible="1"/>
+                    <field name="mobile_formatted" invisible="1"/>
                     <field name="mobile" widget="phone" placeholder="Mobile"/>
                 </div>
             </xpath>
@@ -31,6 +39,10 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.res_partner_kanban_view" />
         <field name="arch" type="xml">
+            <xpath expr="//templates" position="before">
+                <field name="mobile_sanitized"/>
+                <field name="mobile_formatted"/>
+            </xpath>
             <div t-if="record.phone.raw_value" position="after">
                 <div t-if="record.mobile.raw_value" class="d-flex align-items-baseline">
                     <i class="oi oi-fw oi-filled me-1 text-muted" data-icon="smartphone" title="Mobile" />
@@ -46,6 +58,8 @@
         <field name="inherit_id" ref="base.view_partner_simple_form"/>
         <field name="arch" type="xml">
             <field name="phone" position="after">
+                <field name="mobile_sanitized" invisible="1"/>
+                <field name="mobile_formatted" invisible="1"/>
                 <field name="mobile" widget="phone"/>
             </field>
         </field>

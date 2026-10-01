@@ -12,6 +12,40 @@ class TestResPartnerMobile(TransactionCase):
         })
         self.assertEqual(partner.mobile, '+1234567890')
 
+    def test_mobile_normalization_is_independent_from_phone(self):
+        """Normalize mobile without changing the standard phone value."""
+        partner = self.env['res.partner'].create({
+            'name': 'Independent Numbers',
+            'country_id': self.env.ref('base.be').id,
+            'phone': '+3225551234',
+            'mobile': '0475 12 34 56',
+        })
+        self.assertEqual(partner.phone, '+3225551234')
+        self.assertEqual(partner.phone_sanitized, '+3225551234')
+        self.assertEqual(partner.phone_formatted, '+32 2 555 12 34')
+        self.assertEqual(partner.mobile_sanitized, '+32475123456')
+        self.assertEqual(partner.mobile_formatted, '+32 475 12 34 56')
+
+        partner.mobile = '0486 65 43 21'
+
+        self.assertEqual(partner.phone, '+3225551234')
+        self.assertEqual(partner.phone_sanitized, '+3225551234')
+        self.assertEqual(partner.phone_formatted, '+32 2 555 12 34')
+        self.assertEqual(partner.mobile_sanitized, '+32486654321')
+
+    def test_mobile_does_not_populate_empty_phone(self):
+        """A mobile value must not become the phone widget's display value."""
+        partner = self.env['res.partner'].create({
+            'name': 'Mobile Only',
+            'country_id': self.env.ref('base.be').id,
+            'mobile': '0475 12 34 56',
+        })
+
+        self.assertFalse(partner.phone)
+        self.assertFalse(partner.phone_sanitized)
+        self.assertFalse(partner.phone_formatted)
+        self.assertEqual(partner.mobile_sanitized, '+32475123456')
+
     def test_mobile_search(self):
         """Test that searching by mobile number works."""
         partner = self.env['res.partner'].create({
@@ -70,6 +104,23 @@ class TestResPartnerMobile(TransactionCase):
         })
         self.assertEqual(lead.mobile, '+1234567890')
 
+    def test_crm_mobile_normalization_is_independent_from_phone(self):
+        """Normalize lead mobile without changing its standard phone value."""
+        lead = self.env['crm.lead'].create({
+            'name': 'Independent Lead Numbers',
+            'country_id': self.env.ref('base.be').id,
+            'phone': '+3225551234',
+            'mobile': '0475 12 34 56',
+        })
+        self.assertEqual(lead.phone, '+3225551234')
+        self.assertEqual(lead.mobile_sanitized, '+32475123456')
+        self.assertEqual(lead.mobile_formatted, '+32 475 12 34 56')
+
+        lead.mobile = '0486 65 43 21'
+
+        self.assertEqual(lead.phone, '+3225551234')
+        self.assertEqual(lead.mobile_sanitized, '+32486654321')
+
     def test_crm_mobile_search(self):
         """Test that searching by mobile number works for crm.lead."""
         lead = self.env['crm.lead'].create({
@@ -101,4 +152,3 @@ class TestResPartnerMobile(TransactionCase):
 
         # Check if mobile was updated
         self.assertEqual(lead.mobile, '+1122334455')
-

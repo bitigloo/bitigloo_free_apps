@@ -33,6 +33,13 @@ msgid "Display Name"
 msgstr "Anzeigename"
 
 #. module: bitigloo_partner_crm_mobile
+#: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_crm_lead__mobile_formatted
+#: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_res_partner__mobile_formatted
+#: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_res_users__mobile_formatted
+msgid "Formatted Mobile Number"
+msgstr "Formatierte Mobilnummer"
+
+#. module: bitigloo_partner_crm_mobile
 #: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_crm_lead__id
 #: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_res_partner__id
 msgid "ID"
@@ -50,3 +57,10 @@ msgstr "Interessent"
 #: model_terms:ir.ui.view,arch_db:bitigloo_partner_crm_mobile.view_partner_form
 msgid "Mobile"
 msgstr "Mobil"
+
+#. module: bitigloo_partner_crm_mobile
+#: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_crm_lead__mobile_sanitized
+#: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_res_partner__mobile_sanitized
+#: model:ir.model.fields,field_description:bitigloo_partner_crm_mobile.field_res_users__mobile_sanitized
+msgid "Sanitized Mobile Number"
+msgstr "Bereinigte Mobilnummer"
